@@ -2,6 +2,7 @@
 
 HOSTFILE="./hostfile"
 
+# This code assumes there are ssh keys shared between the master node and each other node.
 share_files () {
     while read node; do
         scp  "$1" "$node:/home/test/"
