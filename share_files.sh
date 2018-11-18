@@ -17,10 +17,8 @@ fi
 
 if [[ "$1" == *.cpp ]]; then
     # CPP FILE PROVIDED
-    
-    mpic++ "$1" || exit 1
-    #rm "$1"
 
+    mpic++ "$1" || exit 1
     share_files "a.out"
 
     exit 0
@@ -29,5 +27,4 @@ else
     # PY FILE PROVIDED
 
     share_files "$1"
-
 fi
